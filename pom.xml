@@ -26,6 +26,7 @@
 		<module>memorn-product</module>
         <module>renren-fast</module>
         <module>renren-generator</module>
+        <module>memorn-gateway</module>
 	</modules>
 
     <properties>
@@ -68,6 +69,11 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!--nacos配置中心-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
 
     </dependencies>

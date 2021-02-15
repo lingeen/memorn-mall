@@ -5,6 +5,8 @@ import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,10 +28,27 @@ import com.memorn.common.utils.R;
  * @date 2021-02-15 14:48:02
  */
 @RestController
+@RefreshScope
 @RequestMapping("product/attrattrgrouprelation")
 public class AttrAttrgroupRelationController {
     @Autowired
     private AttrAttrgroupRelationService attrAttrgroupRelationService;
+
+//    @Value("${product.name}")
+//    private String name;
+//
+//    @Value("${product.price}")
+//    private Integer price;
+//
+//    /**
+//     * 列表
+//     */
+//    @RequestMapping("/testconfig")
+//    // @RequiresPermissions("product:attrattrgrouprelation:list")
+//    public R testconfig(){
+//
+//        return R.ok().put("result", name+price);
+//    }
 
     /**
      * 列表
